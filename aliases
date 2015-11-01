@@ -3,7 +3,7 @@
 # http://smemsh.net/src/.gitcli/
 
 [alias]
-stat            = status
+stat            = status --short
 ci              = commit
 co              = checkout
 unstage         = reset HEAD --
