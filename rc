@@ -1,17 +1,17 @@
 #
 # scott@smemsh.net
-# http://smemsh.net/src/.git/
+# http://smemsh.net/src/.gitcli/
 
 [include]
-path            = ~/.git/aliases
-path            = ~/.git/user
-path            = ~/.git/secrets
+path            = ~/.gitcli/aliases
+path            = ~/.gitcli/user
+path            = ~/.gitcli/secrets
 
 [core]
-excludesfile    = ~/.git/ignores
+excludesfile    = ~/.gitcli/ignores
 
 [init]
-templatedir     = ~/.git/skel/
+templatedir     = ~/.gitcli/skel/
 
 [interactive]
 singleKey       = true
