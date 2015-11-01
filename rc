@@ -1,0 +1,20 @@
+#
+# scott@smemsh.net
+# http://smemsh.net/src/.git/
+
+[include]
+path            = ~/.git/aliases
+path            = ~/.git/user
+path            = ~/.git/secrets
+
+[core]
+excludesfile    = ~/.git/ignores
+
+[init]
+templatedir     = ~/.git/skel/
+
+[interactive]
+singleKey       = true
+
+[push]
+default         = simple

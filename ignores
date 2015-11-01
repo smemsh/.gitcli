@@ -1,0 +1,8 @@
+#
+# scott@smemsh.net
+# http://smemsh.net/src/.git/
+
+*\~
+cscope.files
+cscope.out
+tags

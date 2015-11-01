@@ -1,0 +1,11 @@
+#
+# scott@smemsh.net
+# http://smemsh.net/src/.git/
+
+[alias]
+stat            = status
+ci              = commit
+co              = checkout
+unstage         = reset HEAD --
+last            = log -1 HEAD
+fetchr          = git fetch --recurse-submodules

@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+# git pre-commit hook to verify encryption status (git-crypt)
+#
+# make sure that if our repository has been initialized with
+# git-crypt, we don't accidentally commit before we've
+# encrypted (as when we have not added a '.gitattributes'
+# entry prior to staging); this relies on "git-crypt status"
+# returning nonzero if such a condition exists
+#
+# todo: wrap all hooks using run-parts and a .../.git/hook.d/
+#
+# scott@smemsh.net
+# http://smemsh.net/src/.git/
+# https://github.com/AGWA/git-crypt/issues/45
+#
+##############################################################################
+
+if test -d .git-crypt; then
+	if [[ `which git-crypt` ]]; then
+		git-crypt status &>/dev/null; fi; fi
