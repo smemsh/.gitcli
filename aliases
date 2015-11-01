@@ -8,4 +8,4 @@ ci              = commit
 co              = checkout
 unstage         = reset HEAD --
 last            = log -1 HEAD
-fetchr          = git fetch --recurse-submodules
+fetchr          = fetch --recurse-submodules
