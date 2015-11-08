@@ -3,15 +3,15 @@
 # http://smemsh.net/src/.gitcli/
 
 [include]
-path            = .gitcli/aliases
-path            = .gitcli/user
-path            = .gitcli/secrets
+path            = ~/.gitcli/aliases
+path            = ~/.gitcli/user
+path            = ~/.gitcli/secrets
 
 [core]
-excludesfile    = .gitcli/ignores
+excludesfile    = ~/.gitcli/ignores
 
 [init]
-templatedir     = .gitcli/skel/
+templatedir     = ~/.gitcli/skel/
 
 [interactive]
 singleKey       = true
