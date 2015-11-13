@@ -10,3 +10,4 @@ unstage         = reset HEAD --
 last            = log -1 HEAD
 fetchr          = fetch --recurse-submodules
 pullr           = pull --recurse-submodules
+pick            = cherry-pick
