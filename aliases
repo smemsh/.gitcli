@@ -12,3 +12,8 @@ fetchr          = fetch --recurse-submodules
 pullr           = pull --recurse-submodules
 pick            = cherry-pick
 lsr             = remote -v
+
+inlog           = log ..@{u}
+outlog          = log @{u}..
+indiff          = diff ..@{u}
+outdiff         = diff @{u}..
