@@ -17,3 +17,5 @@ inlog           = log ..@{u}
 outlog          = log @{u}..
 indiff          = diff ..@{u}
 outdiff         = diff @{u}..
+instat          = diff --stat ..@{u}
+outstat         = diff --stat @{u}..
