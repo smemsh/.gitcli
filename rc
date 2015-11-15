@@ -21,7 +21,9 @@ default         = simple
 
 [diff]
 tool            = vimdiff
+prompt          = false
 
 [merge]
 tool            = vimdiff
 conflictstyle   = diff3
+prompt          = false
