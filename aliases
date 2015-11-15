@@ -3,17 +3,22 @@
 # http://smemsh.net/src/.gitcli/
 
 [alias]
+
+#
 stat            = status --short
 ci              = commit
 co              = checkout
+pick            = cherry-pick
+
+#
 unstage         = reset HEAD --
 last            = log -1 HEAD
 fetchr          = fetch --recurse-submodules
 pullr           = pull --recurse-submodules
-pick            = cherry-pick
 lsr             = remote -v
 discard         = reset --hard
 
+#
 inlog           = log ..@{u}
 outlog          = log @{u}..
 indiff          = diff ..@{u}
