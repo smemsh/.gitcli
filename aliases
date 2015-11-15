@@ -5,12 +5,12 @@
 [alias]
 
 #
-stat            = status --short
 ci              = commit
 co              = checkout
 pick            = cherry-pick
 
 #
+stat            = status --short
 unstage         = reset HEAD --
 last            = log -1 HEAD
 fetchr          = fetch --recurse-submodules
