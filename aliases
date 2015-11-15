@@ -12,6 +12,7 @@ fetchr          = fetch --recurse-submodules
 pullr           = pull --recurse-submodules
 pick            = cherry-pick
 lsr             = remote -v
+discard         = reset --hard
 
 inlog           = log ..@{u}
 outlog          = log @{u}..
