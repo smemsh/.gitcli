@@ -14,7 +14,7 @@ excludesfile    = ~/.gitcli/ignores
 templatedir     = ~/.gitcli/skel/
 
 [interactive]
-singleKey       = true
+singlekey       = true
 
 [push]
 default         = simple
