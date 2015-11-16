@@ -27,3 +27,4 @@ prompt          = false
 tool            = vimdiff
 conflictstyle   = diff3
 prompt          = false
+renormalize     = true		# for git-crypt
