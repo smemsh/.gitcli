@@ -25,6 +25,7 @@ prompt          = false
 
 [merge]
 tool            = vimdiff
-conflictstyle   = diff3
+conflictstyle   = merge
+#conflictstyle  = diff3
 prompt          = false
 renormalize     = true		# for git-crypt
