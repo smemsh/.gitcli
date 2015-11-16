@@ -17,6 +17,7 @@ fetchr          = fetch --recurse-submodules
 pullr           = pull --recurse-submodules
 lsr             = remote -v
 discard         = reset --hard
+fulldesc        = describe --abbrev=999 --long
 
 #
 inlog           = log ..@{u}
