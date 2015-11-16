@@ -11,12 +11,12 @@ pick            = cherry-pick
 
 #
 stat            = status --short
-unstage         = reset HEAD --
+unstage         = reset -q HEAD --
 last            = log -1 HEAD
 fetchr          = fetch --recurse-submodules
 pullr           = pull --recurse-submodules
 lsr             = remote -v
-discard         = reset --hard
+discard         = reset -q --hard
 fulldesc        = describe --abbrev=999 --long
 
 #
