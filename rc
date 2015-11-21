@@ -9,6 +9,7 @@ path            = ~/.gitcli/secrets
 
 [core]
 excludesfile    = ~/.gitcli/ignores
+pager           = less -iRXES
 
 [init]
 templatedir     = ~/.gitcli/skel/
