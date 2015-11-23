@@ -31,3 +31,6 @@ conflictstyle   = merge
 #conflictstyle  = diff3
 prompt          = false
 renormalize     = true		# for git-crypt
+
+[advice]
+detachedhead    = false
