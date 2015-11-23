@@ -8,18 +8,19 @@ path                    = ~/.gitcli/user
 path                    = ~/.gitcli/secrets
 
 [core]
-excludesfile            = ~/.gitcli/ignores
+excludesFile            = ~/.gitcli/ignores
 pager                   = less -iRXES
 
 [init]
-templatedir             = ~/.gitcli/skel/
+templateDir             = ~/.gitcli/skel/
+defaultToUpstream
 
 [interactive]
-singlekey               = true
+singleKey               = true
 
 [push]
 default                 = current
-followtags              = true
+followTags              = true
 
 [diff]
 tool                    = vimdiff
@@ -31,4 +32,4 @@ prompt                  = false
 renormalize             = true          # for git-crypt
 
 [advice]
-detachedhead            = false
+detachedHead            = false
