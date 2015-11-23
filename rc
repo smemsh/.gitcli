@@ -3,32 +3,32 @@
 # http://smemsh.net/src/.gitcli/
 
 [include]
-path            = ~/.gitcli/aliases
-path            = ~/.gitcli/user
-path            = ~/.gitcli/secrets
+path                    = ~/.gitcli/aliases
+path                    = ~/.gitcli/user
+path                    = ~/.gitcli/secrets
 
 [core]
-excludesfile    = ~/.gitcli/ignores
-pager           = less -iRXES
+excludesfile            = ~/.gitcli/ignores
+pager                   = less -iRXES
 
 [init]
-templatedir     = ~/.gitcli/skel/
+templatedir             = ~/.gitcli/skel/
 
 [interactive]
-singlekey       = true
+singlekey               = true
 
 [push]
-default         = current
-followtags      = true
+default                 = current
+followtags              = true
 
 [diff]
-tool            = vimdiff
-prompt          = false
+tool                    = vimdiff
+prompt                  = false
 
 [merge]
-tool            = vimdiff
-prompt          = false
-renormalize     = true          # for git-crypt
+tool                    = vimdiff
+prompt                  = false
+renormalize             = true          # for git-crypt
 
 [advice]
-detachedhead    = false
+detachedhead            = false
