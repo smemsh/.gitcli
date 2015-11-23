@@ -37,3 +37,6 @@ autoSetupMerge          = always
 
 [advice]
 detachedHead            = false
+
+[rerere]
+enabled                 = true
