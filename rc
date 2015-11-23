@@ -30,6 +30,10 @@ prompt                  = false
 tool                    = vimdiff
 prompt                  = false
 renormalize             = true          # for git-crypt
+defaultToUpstream       = true
+
+[branch]
+autoSetupMerge          = always
 
 [advice]
 detachedHead            = false
