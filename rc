@@ -19,6 +19,7 @@ singlekey       = true
 
 [push]
 default         = simple
+followtags      = true
 
 [diff]
 tool            = vimdiff
