@@ -5,8 +5,8 @@
 [alias]
 
 #
-ci              = commit
-co              = checkout
+ci              = commit -q
+co              = checkout -q
 pick            = cherry-pick
 
 #
