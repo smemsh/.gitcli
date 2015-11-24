@@ -46,3 +46,6 @@ enabled                 = true
 relativePaths           = true
 short                   = true
 submoduleSummary        = true
+
+[fetch]
+recurseSubmodules       = true
