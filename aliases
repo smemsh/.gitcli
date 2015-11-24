@@ -5,12 +5,12 @@
 [alias]
 
 #
+stat            = status
 ci              = commit -q
 co              = checkout -q
 pick            = cherry-pick
 
 #
-stat            = status --short
 last            = log -1 HEAD
 fulldesc        = describe --abbrev=999 --long
 

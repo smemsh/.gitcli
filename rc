@@ -40,3 +40,6 @@ detachedHead            = false
 
 [rerere]
 enabled                 = true
+
+[status]
+short                   = true
