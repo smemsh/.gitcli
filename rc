@@ -44,3 +44,4 @@ enabled                 = true
 [status]
 relativePaths           = true
 short                   = true
+submoduleSummary        = true
