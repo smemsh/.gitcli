@@ -25,6 +25,7 @@ followTags              = true
 [diff]
 tool                    = vimdiff
 prompt                  = false
+submodule               = log
 
 [merge]
 tool                    = vimdiff
