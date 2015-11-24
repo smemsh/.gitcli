@@ -42,4 +42,5 @@ detachedHead            = false
 enabled                 = true
 
 [status]
+relativePaths           = true
 short                   = true
