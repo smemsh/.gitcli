@@ -9,6 +9,7 @@ stat            = status
 ci              = commit -q
 co              = checkout -q
 pick            = cherry-pick
+clone           = clone --no-hardlinks
 
 #
 last            = log -1 HEAD
