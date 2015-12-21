@@ -6,6 +6,7 @@
 
 #
 stat            = status
+dsc             = describe
 ci              = commit -q
 co              = checkout -q
 pick            = cherry-pick
