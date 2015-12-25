@@ -14,6 +14,8 @@ clone           = clone --no-hardlinks
 
 #
 last            = log -1 HEAD
+lastt           = log --color --oneline -10
+lastfew         = log --color --oneline -3
 fulldesc        = describe --abbrev=999 --long
 
 #
