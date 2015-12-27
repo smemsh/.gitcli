@@ -11,6 +11,7 @@ ci              = commit -q
 co              = checkout -q
 pick            = cherry-pick
 clone           = clone --no-hardlinks
+addp            = add --patch
 
 #
 last            = log -1 HEAD
