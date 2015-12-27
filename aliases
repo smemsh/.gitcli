@@ -11,6 +11,8 @@ pick            = cherry-pick
 
 #
 ci              = commit --quiet
+cim             = commit --quiet --message
+ciam            = commit --quiet --all --message
 co              = checkout --quiet
 clone           = clone --no-hardlinks
 addp            = add --patch
