@@ -34,3 +34,4 @@ indiff          = diff ..@{u}
 outdiff         = diff @{u}..
 instat          = diff --stat ..@{u}
 outstat         = diff --stat @{u}..
+staged          = diff --staged
