@@ -7,8 +7,8 @@
 #
 stat            = status
 dsc             = describe
-ci              = commit -q
-co              = checkout -q
+ci              = commit --quiet
+co              = checkout --quiet
 pick            = cherry-pick
 clone           = clone --no-hardlinks
 addp            = add --patch
@@ -20,13 +20,13 @@ lastfew         = log --color --oneline -3
 fulldesc        = describe --abbrev=999 --long
 
 #
-unstage         = reset -q HEAD --
-discard         = reset -q --hard
+unstage         = reset --quiet HEAD --
+discard         = reset --quiet --hard
 
 #
 fetchr          = fetch --recurse-submodules
 pullr           = pull --recurse-submodules
-lsr             = remote -v
+lsr             = remote --verbose
 
 #
 inlog           = log ..@{u}
