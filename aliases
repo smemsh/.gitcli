@@ -7,9 +7,11 @@
 #
 stat            = status
 ds              = describe
+pick            = cherry-pick
+
+#
 ci              = commit --quiet
 co              = checkout --quiet
-pick            = cherry-pick
 clone           = clone --no-hardlinks
 addp            = add --patch
 
