@@ -22,9 +22,14 @@ default                 = current
 followTags              = true
 
 [diff]
-tool                    = vimdiff
+#tool                    = vimdiff
+tool                    = dirdiff       # only testing for now
 prompt                  = false
 submodule               = log
+
+[difftool "dirdiff"]
+cmd                     = vim -f +next '+execute \"DirDiff\" argv(0) argv(1)' \
+                          $LOCAL $REMOTE
 
 [merge]
 tool                    = vimdiff
