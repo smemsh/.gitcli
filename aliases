@@ -16,7 +16,7 @@ ciam            = commit --quiet --all --message
 co              = checkout --quiet
 clone           = clone --no-hardlinks
 addp            = add --patch
-ffmerge         = merge --ff-only
+ff              = merge --ff-only
 
 #
 last            = log -1 HEAD
