@@ -13,7 +13,6 @@ pager                   = less -iRXES
 
 [init]
 templateDir             = ~/.gitcli/skel/
-defaultToUpstream
 
 [interactive]
 singleKey               = true
