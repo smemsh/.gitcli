@@ -5,7 +5,7 @@
 [include]
 path                    = ~/.gitcli/aliases
 path                    = ~/.gitcli/user
-path                    = ~/.gitcli/secrets
+path                    = ~/.gitcli/secrets     # only in private branch
 
 [core]
 excludesFile            = ~/.gitcli/ignores
