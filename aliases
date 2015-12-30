@@ -18,6 +18,7 @@ clone           = clone --no-hardlinks
 addp            = add --patch
 ff              = merge --ff-only
 ds              = describe --abbrev=999 --long
+head            = show --no-patch --format=%H
 
 #
 last            = log -1 HEAD
