@@ -6,7 +6,6 @@
 
 #
 stat            = status
-ds              = describe
 pick            = cherry-pick
 
 #
@@ -18,12 +17,12 @@ co              = checkout --quiet
 clone           = clone --no-hardlinks
 addp            = add --patch
 ff              = merge --ff-only
+ds              = describe --abbrev=999 --long
 
 #
 last            = log -1 HEAD
 lastt           = log --color --oneline -10
 lastfew         = log --color --oneline -3
-fulldesc        = describe --abbrev=999 --long
 
 #
 unstage         = reset --quiet HEAD --
