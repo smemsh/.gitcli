@@ -25,6 +25,7 @@ head            = show --no-patch --format=%H
 last            = log -1 HEAD
 lastt           = log --color --oneline -10
 lastfew         = log --color --oneline -3
+lg              = log --oneline
 
 #
 unstage         = reset --quiet HEAD --
