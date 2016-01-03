@@ -7,6 +7,7 @@
 #
 stat            = status
 pick            = cherry-pick
+br              = branch
 
 #
 ci              = commit --quiet
