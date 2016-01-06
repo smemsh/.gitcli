@@ -6,6 +6,7 @@
 
 #
 stat            = status
+st              = status
 pick            = cherry-pick
 br              = branch
 
