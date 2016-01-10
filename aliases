@@ -9,6 +9,7 @@ stat            = status
 st              = status
 pick            = cherry-pick
 br              = branch
+sh              = show
 
 #
 ci              = commit --quiet
