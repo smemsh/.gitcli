@@ -12,9 +12,9 @@ br              = branch
 sh              = show
 
 #
-ci              = commit --quiet
-cim             = commit --quiet --message
-ciam            = commit --quiet --all --message
+ci              = commit --quiet --verbose
+cim             = commit --quiet --verbose --message
+ciam            = commit --quiet --verbose --all --message
 amend           = commit --amend
 co              = checkout --quiet
 clone           = clone --no-hardlinks
