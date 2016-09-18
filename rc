@@ -51,3 +51,7 @@ enabled                 = true
 relativePaths           = true
 short                   = true
 submoduleSummary        = true
+
+[stash]
+showPatch               = true
+showStat                = true
