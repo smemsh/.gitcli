@@ -14,6 +14,7 @@ sh              = show
 #
 ci              = commit --quiet --verbose
 cim             = commit --quiet --verbose --message
+cia             = commit --quiet --verbose --all
 ciam            = commit --quiet --verbose --all --message
 amend           = commit --amend
 co              = checkout --quiet
