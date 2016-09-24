@@ -39,6 +39,7 @@ discard         = reset --quiet --hard
 fetchr          = fetch --recurse-submodules
 pullr           = pull --recurse-submodules
 lsr             = remote --verbose
+url             = ls-remote --get-url
 
 #
 inlog           = log ..@{u}
