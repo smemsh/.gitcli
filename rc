@@ -1,6 +1,8 @@
 #
 # scott@smemsh.net
 # http://smemsh.net/src/.gitcli/
+#
+##############################################################################
 
 [include]
 path                    = ~/.gitcli/aliases
