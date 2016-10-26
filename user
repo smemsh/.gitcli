@@ -3,6 +3,23 @@
 # http://smemsh.net/src/.gitcli/
 
 [user]
+
+# our user.name is always the same, but user.email differs between work and
+# personal repositories, so force an explicit decision to be made about what
+# email address is used for the commits by instructing git to only use config
+# (never infer), but leaving it unset for the global case
+# note: this requires git 2.8.0 to work
+#
 name            = Scott Mcdermott
-email           = scott@smemsh.net
+useConfigOnly   = true
+#email           =
+
+# unfortunately signingKey is not subject to useConfigOnly; it merely calls
+# gpg without any specified key and lets gpg make the decision (which is
+# usually wrong: it uses the first key it finds that matches the email, rather
+# than the newest key).  since we are only at this time signing with the one
+# key, this isn't an issue and we just set it globally, but really (TODO) git
+# should be changed so that user.useConfigOnly really requires config for
+# *every* user.* variable in the whole namespace
+#
 signingKey      = 0xF315433C9D09B4DF
