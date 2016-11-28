@@ -40,6 +40,8 @@ fetchr          = fetch --recurse-submodules
 pullr           = pull --recurse-submodules
 lsr             = remote --verbose
 url             = ls-remote --get-url
+lsa             = "!f(){ git ls-tree --abbrev=7 -l ${1:-@} ${2:-''}; }; f"
+lsar            = "!f(){ git lsa -r $@; }; f"
 
 #
 inlog           = log ..@{u}
