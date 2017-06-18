@@ -39,6 +39,7 @@ discard         = reset --quiet --hard
 #
 fetchr          = fetch --recurse-submodules
 pullr           = pull --recurse-submodules
+repull          = pull --rebase
 lsr             = remote --verbose
 url             = ls-remote --get-url
 lsa             = "!f(){ git ls-tree --abbrev=7 -l ${1:-@} ${2:-''}; }; f"
