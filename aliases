@@ -22,7 +22,7 @@ co              = checkout --quiet
 clone           = clone --no-hardlinks
 addp            = add --patch
 ff              = merge --ff-only
-fpush           = !git push --force origin +`git rev-parse --abbrev-ref @`
+fpush           = !git push --quiet --force origin +`git rev-parse --abbrev-ref @`
 ds              = describe --abbrev=999 --long
 head            = show --no-patch --format=%H
 
