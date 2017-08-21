@@ -57,3 +57,6 @@ submoduleSummary        = true
 [stash]
 showPatch               = true
 showStat                = true
+
+[log]
+decorate                = false
