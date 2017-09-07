@@ -28,9 +28,9 @@ head            = show --no-patch --format=%H
 
 #
 last            = log -1 HEAD
-lastt           = log --color --oneline -10
-lastfew         = log --color --oneline -3
-lastone         = log --color --oneline -1
+lastt           = log --oneline -10
+lastfew         = log --oneline -3
+lastone         = log --oneline -1
 lg              = log --oneline
 
 #
