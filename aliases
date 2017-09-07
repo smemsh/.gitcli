@@ -28,10 +28,10 @@ head            = show --no-patch --format=%H
 
 #
 last            = log -1 HEAD
+lasttt          = log --oneline
 lastt           = log --oneline -10
 lastfew         = log --oneline -3
 lastone         = log --oneline -1
-lg              = log --oneline
 
 #
 unstage         = reset --quiet HEAD --
