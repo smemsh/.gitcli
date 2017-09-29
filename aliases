@@ -55,3 +55,4 @@ outdiff         = diff @{u}..
 instat          = diff --stat ..@{u}
 outstat         = diff --stat @{u}..
 staged          = diff --staged
+wdiff           = diff --color --word-diff-regex=.
