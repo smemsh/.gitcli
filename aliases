@@ -7,6 +7,7 @@
 #
 stat            = status
 st              = status
+stn             = status --untracked-files=no
 pick            = cherry-pick
 br              = branch
 sh              = show
