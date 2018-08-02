@@ -49,6 +49,20 @@ lsa             = "!f(){ git ls-tree --abbrev=7 -l ${1:-@} ${2:-''}; }; f"
 lsar            = "!f(){ git lsa -r $@; }; f"
 
 #
+pathmv = "!bash -c '\
+    set -- \"$0\" \"$@\"; \
+    if test $# == 1; then initial=\"\"; prepend=\"$1\"; \
+    elif test $# == 2; then initial=\"$1\"; prepend=\"$2\"; \
+    else echo \"bad args\"; return 1; fi; \
+    git filter-branch --index-filter \"\
+        git ls-files -s \
+        | sed \\\"s,\\\\t$initial,&$prepend/,\\\" \
+        | GIT_INDEX_FILE=\\$GIT_INDEX_FILE.new \
+          git update-index --index-info && \
+            mv \\$GIT_INDEX_FILE.new \\$GIT_INDEX_FILE \
+    \" HEAD; \
+'"
+#
 inlog           = log ..@{u}
 outlog          = log @{u}..
 indiff          = diff ..@{u}
