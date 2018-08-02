@@ -62,6 +62,29 @@ pathmv = "!bash -c '\
             mv \\$GIT_INDEX_FILE.new \\$GIT_INDEX_FILE \
     \" HEAD; \
 '"
+
+# same as recommentx except for sed line
+recomment = "!bash -c '\
+    set -- \"$0\" \"$@\"; \
+    if test $# == 1; then prefix=\"$1\"; \
+    else echo \"bad args\"; return 1; fi; \
+    git filter-branch -f --msg-filter \"\
+        sed -r \\\"s,^,$prefix,\\\" \
+    \"; \
+'"
+# same as recomment but keeps 2-char prefix
+# TODO how to not duplicate everything but the sed line with above command?
+# maybe have to use external script
+#
+recommentx = "!bash -c '\
+    set -- \"$0\" \"$@\"; \
+    if test $# == 1; then prefix=\"$1\"; \
+    else echo \"bad args\"; return 1; fi; \
+    git filter-branch -f --msg-filter \"\
+        sed -r \\\"s,^(..)(.*),\\1$prefix\\2,\\\" \
+    \"; \
+'"
+
 #
 inlog           = log ..@{u}
 outlog          = log @{u}..
