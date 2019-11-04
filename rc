@@ -60,3 +60,4 @@ showStat                = true
 
 [log]
 decorate                = false
+follow                  = true
