@@ -19,6 +19,9 @@ templateDir             = ~/.gitcli/skel/
 [interactive]
 singleKey               = true
 
+[pull]
+ff                      = only
+
 [push]
 default                 = current
 followTags              = true
