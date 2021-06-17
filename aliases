@@ -50,6 +50,15 @@ lsa             = "!f(){ git ls-tree --abbrev=7 -l ${1:-@} ${2:-''}; }; f"
 lsar            = "!f(){ git lsa -r $@; }; f"
 
 #
+inlog           = log ..@{u}
+outlog          = log @{u}..
+indiff          = diff ..@{u}
+outdiff         = diff @{u}..
+instat          = diff --stat ..@{u}
+outstat         = diff --stat @{u}..
+staged          = diff --staged
+wdiff           = diff --color --word-diff-regex=.
+
 pathmv = "!bash -c '\
     set -- \"$0\" \"$@\"; \
     if test $# == 1; then initial=\"\"; prepend=\"$1\"; \
@@ -85,13 +94,3 @@ recommentx = "!bash -c '\
         sed -r \\\"s,^(..)(.*),\\1$prefix\\2,\\\" \
     \"; \
 '"
-
-#
-inlog           = log ..@{u}
-outlog          = log @{u}..
-indiff          = diff ..@{u}
-outdiff         = diff @{u}..
-instat          = diff --stat ..@{u}
-outstat         = diff --stat @{u}..
-staged          = diff --staged
-wdiff           = diff --color --word-diff-regex=.
