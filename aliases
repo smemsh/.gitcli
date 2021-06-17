@@ -59,8 +59,10 @@ outstat         = diff --stat @{u}..
 staged          = diff --staged
 wdiff           = diff --color --word-diff-regex=.
 
+# TODO: https://github.com/newren/git-filter-repo/ is recommended by upstream
 pathmv = "!bash -c '\
     set -- \"$0\" \"$@\"; \
+    export FILTER_BRANCH_SQUELCH_WARNING=1; \
     if test $# == 1; then initial=\"\"; prepend=\"$1\"; \
     elif test $# == 2; then initial=\"$1\"; prepend=\"$2\"; \
     else echo \"bad args\"; return 1; fi; \
@@ -74,6 +76,7 @@ pathmv = "!bash -c '\
 '"
 #
 pathrm = "!bash -c '\
+    export FILTER_BRANCH_SQUELCH_WARNING=1; \
     set -- \"$0\" \"$@\"; \
     if test $# == 1; then path=\"$1\"; \
     else echo \"bad args\"; return 1; fi; \
