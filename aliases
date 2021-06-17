@@ -72,6 +72,26 @@ pathmv = "!bash -c '\
             mv \\$GIT_INDEX_FILE.new \\$GIT_INDEX_FILE \
     \" HEAD; \
 '"
+#
+pathrm = "!bash -c '\
+    set -- \"$0\" \"$@\"; \
+    if test $# == 1; then path=\"$1\"; \
+    else echo \"bad args\"; return 1; fi; \
+    git filter-branch \
+        --force \
+        --prune-empty \
+        --tag-name-filter cat \
+        --index-filter \"\
+            git rm \
+                -r \
+                --cached \
+                --ignore-unmatch \
+                $path \
+        \" \
+    -- \
+    --all \
+    ; \
+'"
 
 # same as recommentx except for sed line
 recomment = "!bash -c '\
