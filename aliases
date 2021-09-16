@@ -28,6 +28,7 @@ fpush           = !git push --quiet --force origin +`git rev-parse --abbrev-ref 
 ds              = describe --abbrev=999 --long
 head            = show --no-patch --format=%H
 this            = rev-parse --abbrev-ref @
+patch           = am --show-current-patch
 
 #
 last            = log -1 HEAD
