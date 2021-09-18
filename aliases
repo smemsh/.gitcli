@@ -13,10 +13,10 @@ br              = branch
 sh              = show
 
 #
-ci              = commit --quiet --verbose
-cim             = commit --quiet --verbose --message
-cia             = commit --quiet --verbose --all
-ciam            = commit --quiet --verbose --all --message
+ci              = commit --quiet
+cim             = commit --quiet --message
+cia             = commit --quiet --all
+ciam            = commit --quiet --all --message
 amend           = commit --amend
 remend          = commit --amend --no-edit
 co              = checkout --quiet

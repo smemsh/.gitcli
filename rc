@@ -13,6 +13,9 @@ path                    = ~/.gitcli/secrets     # only in private branch
 excludesFile            = ~/.gitcli/ignores
 pager                   = less -iRXES
 
+[commit]
+verbose                 = true
+
 [init]
 templateDir             = ~/.gitcli/skel/
 
