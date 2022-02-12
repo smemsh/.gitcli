@@ -36,7 +36,7 @@ lasttt          = log --oneline
 lastt           = log --oneline -10
 lastfew         = log --oneline -3
 lastone         = log --oneline -1
-lasth           = git log -1 --format='%H%n%an <%ae>%n%aI'
+lasth           = log -1 --format='%H%n%an <%ae>%n%aI'
 
 #
 unstage         = reset --quiet HEAD --
