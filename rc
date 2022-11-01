@@ -51,6 +51,7 @@ autoSetupMerge          = always
 
 [advice]
 detachedHead            = false
+skippedCherryPicks      = false
 
 [rerere]
 enabled                 = true
