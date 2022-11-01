@@ -4,7 +4,7 @@
 #
 ##############################################################################
 
-[include]
+[include] # ignored in git versions before v1.7.9-10-g9b25a0b52e
 path                    = ~/.gitcli/aliases
 path                    = ~/.gitcli/user
 path                    = ~/.gitcli/secrets     # only in private branch
