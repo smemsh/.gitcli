@@ -24,6 +24,7 @@ clone           = clone --no-hardlinks
 addp            = add --patch
 ff              = merge --ff-only
 noff            = merge --no-ff
+pff             = pull --ff-only
 fpush           = !git push --quiet --force origin +`git rev-parse --abbrev-ref @`
 ds              = describe --abbrev=999 --long
 head            = show --no-patch --format=%H
