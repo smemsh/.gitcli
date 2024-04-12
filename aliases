@@ -34,7 +34,8 @@ contains        = merge-base --is-ancestor
 
 #
 last            = log -1 HEAD
-lasttt          = log --oneline
+lastn           = "!f(){ git log --oneline ${1:+-$1}; }; f"
+lasttt          = log --oneline -30
 lastt           = log --oneline -10
 lastfew         = log --oneline -3
 lastone         = log --oneline -1
