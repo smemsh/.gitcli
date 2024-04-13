@@ -29,7 +29,7 @@ fpush           = !git push --quiet --force origin +`git rev-parse --abbrev-ref 
 ds              = describe --abbrev=999 --long
 head            = show --no-patch --format=%H
 this            = rev-parse --abbrev-ref @
-patch           = am --show-current-patch
+patch           = rebase --show-current-patch
 contains        = merge-base --is-ancestor
 
 #
