@@ -34,9 +34,12 @@ contains        = merge-base --is-ancestor
 
 #
 last            = log -1 HEAD
-lastn           = "!f(){ if test -n \"$1\" -a -z \"${1##[0-9]*}\"; \
-                         then a=$1; shift; set -- -$a \"$@\"; fi; \
-                         git log --oneline \"$@\"; }; f"
+lastn           = "!bash -c '\
+    set -- \"$0\" \"$@\"; \
+    if [[ \"$1\" =~ ^[[:digit:]]+$ ]]; \
+    then a=$1; shift; set -- -$a \"$@\"; fi; \
+    git log --oneline \"$@\"; \
+'"
 lasttt          = log --oneline -30
 lastt           = log --oneline -10
 lastfew         = log --oneline -3
