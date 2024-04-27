@@ -34,17 +34,17 @@ contains        = merge-base --is-ancestor
 
 #
 last            = log -1 HEAD
+lasth           = log -1 --format='%H%n%an <%ae>%n%aI'
+lastone         = log --oneline -1
+lastfew         = log --oneline -3
+lastt           = log --oneline -10
+lasttt          = log --oneline -30
 lastn           = "!bash -c '\
     set -- \"$0\" \"$@\"; \
     if [[ \"$1\" =~ ^[[:digit:]]+$ ]]; \
     then a=$1; shift; set -- -$a \"$@\"; fi; \
     git log --oneline \"$@\"; \
 '"
-lasttt          = log --oneline -30
-lastt           = log --oneline -10
-lastfew         = log --oneline -3
-lastone         = log --oneline -1
-lasth           = log -1 --format='%H%n%an <%ae>%n%aI'
 
 #
 unstage         = reset --quiet HEAD --
