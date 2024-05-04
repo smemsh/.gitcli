@@ -56,7 +56,14 @@ pullr           = pull --recurse-submodules
 repull          = pull --rebase
 lsr             = remote --verbose
 url             = ls-remote --get-url
-lsa             = "!f(){ git ls-tree --abbrev=7 -l ${1:-@} ${2:-.}; }; f"
+lsa             = "!bash -c '\
+    set -- \"$0\" \"$@\"; \
+    if git cat-file -e \"$1\" 2>/dev/null; \
+    then rev=$1; shift; \
+    else rev=@; fi; \
+    test -n \"$1\" || set -- .; \
+    git ls-tree --abbrev=7 -l \"$rev\" \"$@\"; \
+'"
 lsar            = "!f(){ git lsa -r $@; }; f"
 
 #
