@@ -40,11 +40,10 @@ lastfew         = log --oneline -3
 lastt           = log --oneline -10
 lasttt          = log --oneline -30
 lastn           = "!bash -c '\
-    set -- \"$0\" \"$@\"; \
     if [[ \"$1\" =~ ^[[:digit:]]+$ ]]; \
     then a=$1; shift; set -- -$a \"$@\"; fi; \
     git log --oneline \"$@\"; \
-'"
+' git-lastn"
 
 #
 unstage         = reset --quiet HEAD --
@@ -57,13 +56,12 @@ repull          = pull --rebase
 lsr             = remote --verbose
 url             = ls-remote --get-url
 lsa             = "!bash -c '\
-    set -- \"$0\" \"$@\"; \
     if git cat-file -e \"$1\" 2>/dev/null; \
     then rev=$1; shift; \
     else rev=@; fi; \
     test -n \"$1\" || set -- .; \
     git ls-tree --abbrev=7 -l \"$rev\" \"$@\"; \
-'"
+' git-lsa"
 lsar            = "!f(){ git lsa -r $@; }; f"
 
 #
@@ -78,7 +76,6 @@ wdiff           = diff --color --word-diff-regex=.
 
 # TODO: https://github.com/newren/git-filter-repo/ is recommended by upstream
 pathmv = "!bash -c '\
-    set -- \"$0\" \"$@\"; \
     export FILTER_BRANCH_SQUELCH_WARNING=1; \
     if test $# == 1; then initial=\"\"; prepend=\"$1\"; \
     elif test $# == 2; then initial=\"$1\"; prepend=\"$2\"; \
@@ -90,11 +87,10 @@ pathmv = "!bash -c '\
           git update-index --index-info && \
             mv \\$GIT_INDEX_FILE.new \\$GIT_INDEX_FILE \
     \" HEAD; \
-'"
+' git-pathmv"
 #
 pathrm = "!bash -c '\
     export FILTER_BRANCH_SQUELCH_WARNING=1; \
-    set -- \"$0\" \"$@\"; \
     if test $# == 1; then path=\"$1\"; \
     else echo \"bad args\"; return 1; fi; \
     git filter-branch \
@@ -111,26 +107,24 @@ pathrm = "!bash -c '\
     -- \
     --all \
     ; \
-'"
+' git-pathrm"
 
 # same as recommentx except for sed line
 recomment = "!bash -c '\
-    set -- \"$0\" \"$@\"; \
     if test $# == 1; then prefix=\"$1\"; \
     else echo \"bad args\"; return 1; fi; \
     git filter-branch -f --msg-filter \"\
         sed -r \\\"s,^,$prefix,\\\" \
     \"; \
-'"
+' git-recomment"
 # same as recomment but keeps 2-char prefix
 # TODO how to not duplicate everything but the sed line with above command?
 # maybe have to use external script
 #
 recommentx = "!bash -c '\
-    set -- \"$0\" \"$@\"; \
     if test $# == 1; then prefix=\"$1\"; \
     else echo \"bad args\"; return 1; fi; \
     git filter-branch -f --msg-filter \"\
         sed -r \\\"s,^(..)(.*),\\1$prefix\\2,\\\" \
     \"; \
-'"
+' git-recommentx"
