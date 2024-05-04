@@ -75,6 +75,7 @@ staged          = diff --staged
 wdiff           = diff --color --word-diff-regex=.
 
 # TODO: https://github.com/newren/git-filter-repo/ is recommended by upstream
+#
 pathmv = "!bash -c '\
     export FILTER_BRANCH_SQUELCH_WARNING=1; \
     if test $# == 1; then initial=\"\"; prepend=\"$1\"; \
@@ -108,7 +109,7 @@ pathrm = "!bash -c '\
     --all \
     ; \
 ' git-pathrm"
-
+#
 # same as recommentx except for sed line
 recomment = "!bash -c '\
     if test $# == 1; then prefix=\"$1\"; \
@@ -117,6 +118,7 @@ recomment = "!bash -c '\
         sed -r \\\"s,^,$prefix,\\\" \
     \"; \
 ' git-recomment"
+#
 # same as recomment but keeps 2-char prefix
 # TODO how to not duplicate everything but the sed line with above command?
 # maybe have to use external script
