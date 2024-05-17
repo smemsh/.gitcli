@@ -34,7 +34,7 @@ patch           = rebase --show-current-patch
 contains        = merge-base --is-ancestor
 
 #
-logmsg          = git show -s --pretty=format:%b
+logmsg          = show -s --pretty=format:%b
 last            = log -1 HEAD
 lasth           = log -1 --format='%H%n%an <%ae>%n%aI'
 lastone         = log --oneline -1
