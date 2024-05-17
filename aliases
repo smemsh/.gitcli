@@ -26,6 +26,7 @@ ff              = merge --ff-only
 noff            = merge --no-ff
 pff             = pull --ff-only
 fpush           = !git push -q -f origin +`git rev-parse --abbrev-ref @`
+pushf           = push --force
 ds              = describe --abbrev=999 --long
 head            = show --no-patch --format=%H
 this            = rev-parse --abbrev-ref @
