@@ -6,6 +6,8 @@
 cscope.files
 cscope.out
 ncscope.out.temp
+cscope.out.files
+cscope.out.lock
 tags
 GPATH
 GRTAGS
