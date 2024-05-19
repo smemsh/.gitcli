@@ -5,6 +5,7 @@
 *\~
 cscope.files
 cscope.out
+ncscope.out.temp
 tags
 GPATH
 GRTAGS
