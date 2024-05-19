@@ -6,3 +6,6 @@
 cscope.files
 cscope.out
 tags
+GPATH
+GRTAGS
+GTAGS
