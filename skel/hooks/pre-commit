@@ -11,7 +11,7 @@
 # todo: wrap all hooks using run-parts and a .../.git/hook.d/
 #
 # scott@smemsh.net
-# http://smemsh.net/src/.git/
+# https://github.com/smemsh/.gitcli/
 # https://github.com/AGWA/git-crypt/issues/45
 #
 ##############################################################################
