@@ -74,7 +74,7 @@ outdiff         = diff @{u}..
 instat          = diff --stat ..@{u}
 outstat         = diff --stat @{u}..
 staged          = diff --staged
-wdiff           = diff --color --word-diff-regex=.
+wdiff           = diff --color --word-diff=color --word-diff-regex=.
 
 # TODO: https://github.com/newren/git-filter-repo/ is recommended by upstream
 #
