@@ -16,6 +16,10 @@
 #
 ##############################################################################
 
-if test -d .git-crypt; then
-	if [[ `which git-crypt` ]]; then
-		git-crypt status &>/dev/null; fi; fi
+if [ -d .git-crypt ] && [[ $(type -P git-crypt) ]]
+then
+	git diff -z --cached --name-status \
+	| cut -z -d '' -f 2 \
+	| xargs -r -0 git-crypt status \
+	&>/dev/null
+fi
