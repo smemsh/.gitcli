@@ -22,6 +22,9 @@ templateDir             = ~/.gitcli/skel/
 [interactive]
 singleKey               = true
 
+[fetch]
+parallel                = 8
+
 [pull]
 ff                      = only
 
