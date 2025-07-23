@@ -42,11 +42,11 @@ lastfew         = log --oneline -3
 lastt           = log --oneline -10
 lasttt          = log --oneline -30
 lastn           = "!bash -c '\
-                    cd \"$GIT_PREFIX\"; \
-                    if [[ \"$1\" =~ ^[[:digit:]]+$ ]]; \
-                    then a=$1; shift; set -- -$a \"$@\"; fi; \
-                    git log --oneline \"$@\"; \
-                  ' git-lastn"
+cd \"$GIT_PREFIX\"; \
+if [[ \"$1\" =~ ^[[:digit:]]+$ ]]; \
+then a=$1; shift; set -- -$a \"$@\"; fi; \
+git log --oneline \"$@\"; \
+' git-lastn"
 
 #
 unstage         = reset --quiet HEAD --
@@ -58,15 +58,17 @@ pullr           = pull --recurse-submodules
 repull          = pull --rebase
 lsr             = remote --verbose
 url             = ls-remote --get-url
-lsa             = "!bash -c '\
-                    if git cat-file -e \"$1\" 2>/dev/null; \
-                    then rev=$1; shift; \
-                    else rev=@; fi; \
-                    test -n \"$1\" || set -- .; \
-                    cd \"$GIT_PREFIX\"; \
-                    git ls-tree --abbrev=7 -l \"$rev\" \"$@\"; \
-                  ' git-lsa"
+
+#
 lsar            = "!f () { git lsa -r $@; }; f"
+lsa             = "!bash -c '\
+if git cat-file -e \"$1\" 2>/dev/null; \
+then rev=$1; shift; \
+else rev=@; fi; \
+test -n \"$1\" || set -- .; \
+cd \"$GIT_PREFIX\"; \
+git ls-tree --abbrev=7 -l \"$rev\" \"$@\"; \
+' git-lsa"
 
 #
 inlog           = log ..@{u}
