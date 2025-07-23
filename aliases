@@ -42,6 +42,7 @@ lastfew         = log --oneline -3
 lastt           = log --oneline -10
 lasttt          = log --oneline -30
 lastn           = "!bash -c '\
+                    cd \"$GIT_PREFIX\"; \
                     if [[ \"$1\" =~ ^[[:digit:]]+$ ]]; \
                     then a=$1; shift; set -- -$a \"$@\"; fi; \
                     git log --oneline \"$@\"; \
@@ -62,6 +63,7 @@ lsa             = "!bash -c '\
                     then rev=$1; shift; \
                     else rev=@; fi; \
                     test -n \"$1\" || set -- .; \
+                    cd \"$GIT_PREFIX\"; \
                     git ls-tree --abbrev=7 -l \"$rev\" \"$@\"; \
                   ' git-lsa"
 lsar            = "!f () { git lsa -r $@; }; f"
