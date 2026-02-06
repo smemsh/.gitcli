@@ -11,6 +11,7 @@ stn             = status --untracked-files=no
 pick            = cherry-pick
 br              = branch
 sh              = show
+shallow         = rev-parse --is-shallow-repository
 
 #
 ci              = commit --quiet
