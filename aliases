@@ -33,6 +33,7 @@ head            = show --no-patch --format=%H
 this            = rev-parse --abbrev-ref @
 patch           = rebase --show-current-patch
 contains        = merge-base --is-ancestor
+forkpoint       = merge-base --fork-point
 
 #
 logmsg          = log --format='%B'
